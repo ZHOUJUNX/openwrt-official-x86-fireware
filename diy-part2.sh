@@ -10,5 +10,19 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-# Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+# Modify default IP Gate #
+sed -i 's/192.168.1.1/172.16.253.254/g' package/base-files/files/bin/config_generate
+echo '### Updates default IP gate ###'
+
+# argon theme plug-in components #
+rm -rf package/feeds/luci/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+echo '### luci-theme-argon ###'
+
+# argon config plug-in components #
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/feeds/luci/luci-app-argon-config
+echo '### luci-app-argon-config ###'
+
+# shutdown plug-in components #
+git clone https://github.com/ZHOUJUNX/luci-app-poweroff.git package/feeds/luci/luci-app-poweroff
+echo '### Shutdown Router ###'
