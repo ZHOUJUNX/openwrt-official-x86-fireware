@@ -26,3 +26,7 @@ echo '### luci-app-argon-config ###'
 # shutdown plug-in components #
 git clone https://github.com/ZHOUJUNX/luci-app-poweroff.git package/feeds/luci/luci-app-poweroff
 echo '### Shutdown Router ###'
+
+# turboacc plug-in components #
+curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+echo '### turboacc plug-in components ###'
