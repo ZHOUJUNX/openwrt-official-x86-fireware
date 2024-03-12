@@ -17,10 +17,6 @@
 sed -i "/helloworld/d" "feeds.conf.default"
 echo 'src-git helloworld https://github.com/fw876/helloworld.git;main' >>feeds.conf.default
 
-# passwall
-# echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall.git' >>feeds.conf.default
-# echo 'src-git PWluci https://github.com/xiaorouji/openwrt-passwall.git' >>feeds.conf.default
-# echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' >>feeds.conf.default
-
-# echo "src-git oui https://github.com/zhaojh329/oui.git" >>feeds.conf.default
-
+# diskman
+sed -i "/diskman/d" "feeds.conf.default"
+echo 'src-git diskman https://github.com/lisaac/luci-app-diskman.git' >>feeds.conf.default
